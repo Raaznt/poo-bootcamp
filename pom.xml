@@ -6,8 +6,8 @@
   <artifactId>poo-bootcamp</artifactId>
   <version>1.0.0</version>
   <properties>
-    <maven.compiler.target>7</maven.compiler.target>
-    <maven.compiler.source>7</maven.compiler.source>
+    <maven.compiler.target>8</maven.compiler.target>
+    <maven.compiler.source>8</maven.compiler.source>
   </properties>
   <packaging>pom</packaging>
   <name>poo-bootcamp</name>

@@ -2,29 +2,16 @@ package dio.ifood;
 
 import java.time.LocalDate;
 
-public class Mentoria {
-    private String titulo;
-    private String descricao;
+public class Mentoria extends Conteudo{
     private LocalDate data;
 
     Mentoria() {
 
     }
 
-    public String getTitulo() {
-        return this.titulo;
-    }
-
-    public void setTitulo(String titulo) {
-        this.titulo = titulo;
-    }
-
-    public String getDescricao() {
-        return this.descricao;
-    }
-
-    public void setDescricao(String descricao) {
-        this.descricao = descricao;
+    @Override
+    public double calcularXP() {
+        return 20d * XP_PADRAO;
     }
 
     public LocalDate getData() {
@@ -38,8 +25,8 @@ public class Mentoria {
     @Override
     public String toString() {
         return "Curso{" +
-                "titulo='"+ this.titulo + "\'" +
-                ", descricao='"+ this.descricao + '\'' +
+                "titulo='"+ getTitulo() + "\'" +
+                ", descricao='"+ getDescricao() + '\'' +
                 ", data=" + this.data + "}"; 
     }
 }

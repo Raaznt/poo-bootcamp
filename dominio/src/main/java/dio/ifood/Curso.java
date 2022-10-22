@@ -2,16 +2,21 @@ package dio.ifood;
 
 import java.time.LocalDate;
 
-public class Curso {
-    private String titulo;
-    private String descricao;
+public class Curso extends Conteudo{
+    /*private String titulo;
+    private String descricao;*/
     private int cargaHoraria;
 
     Curso() {
         
     }
 
-    public String getTitulo() {
+    @Override
+    public double calcularXP() {
+        return 20d * cargaHoraria;
+    }
+
+    /*public String getTitulo() {
         return this.titulo;
     }
 
@@ -25,7 +30,7 @@ public class Curso {
 
     public void setDescricao(String descricao) {
         this.descricao = descricao;
-    }
+    }*/
 
     public int getCargaHoraria() {
         return this.cargaHoraria;
@@ -38,8 +43,8 @@ public class Curso {
     @Override
     public String toString() {
         return "Curso{" +
-                "titulo='"+ this.titulo + "\'" +
-                ", descricao='"+ this.descricao + '\'' +
+                "titulo='"+ getTitulo() + "\'" +
+                ", descricao='"+ getDescricao() + '\'' +
                 ", cargaHoraria=" + this.cargaHoraria + "}"; 
     }
     
